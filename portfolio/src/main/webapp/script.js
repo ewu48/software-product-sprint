@@ -12,17 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-function addRandomGreeting() {
-  const greetings =
-      ['Eric is from Toronto ON', 'Eric likes Electronic Dance Music', 'Eric has gotten numerous concussions！', "Eric's favourite place to travel has been Hawaii"];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
 
 var colors = new Array(
   [62,35,255],
@@ -84,3 +73,9 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 }
 
 setInterval(updateGradient,10); 
+
+//typing animation
+//const textArray = ["I'm a software engineering and business student at Western University", "Outside of school I love photography, winter sports, and EDM", "Please work", "okeassee"];
+
+//hover animation
+
