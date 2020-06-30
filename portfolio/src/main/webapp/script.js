@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+<<<<<<< HEAD
 
 var colors = new Array(
   [62,35,255],
@@ -70,6 +71,21 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
     colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
     
   }
+=======
+/**
+ * Adds a random greeting to the page.
+ */
+function addRandomGreeting() {
+  const greetings =
+      ['Eric has gotten a few concussions', 'Eric loves electronic dance music', 'Eric is from Toronto, Canada', "Eric's favourite place that he has travelled to is Hawaii"];
+
+  // Pick a random greeting.
+  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+  // Add it to the page.
+  const greetingContainer = document.getElementById('greeting-container');
+  greetingContainer.innerText = greeting;
+>>>>>>> d16c473cb1b6bc054e0f203b596bb21dfaf2613e
 }
 
 setInterval(updateGradient,10); 
