@@ -4,6 +4,47 @@
     <meta charset="UTF-8">
     <title>Eric Wu's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+<<<<<<< HEAD
+    <script src="script.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>  
+ <body>
+   
+<div id="gradient"> 
+<div id="content">
+    <table style=" margin-left:auto; margin-right: auto; vertical-align:top; margin:0; border-spacing:0px; border:0px; width:100%">
+        <tr>
+            <td style="height:40px;"></>
+        </tr>
+        <tr style="margin:0px; padding:0px">
+            <td style="text-align:center"><a style="font-size:25px; font-family: 'Saira Condensed', sans-serif; color: white; "href="projects.html">Projects</a></td>
+        </tr>
+        <tr style="height:100px; margin:0px; padding:0px">    
+            <td style="font-size:150px; font-family: 'Titillium Web', sans-serif; color:white; text-align:center; height:150px">Eric Wu</td>
+        </tr>
+        <tr>
+            <td style="text-align:center"><p style="margin:0"> <span class="typed-text"></span><span class="cursor">&nbsp;</span></p></td>
+        </tr>
+     </table>
+
+     <div class = "socialmedia" style="text-align:center;">
+         <ul>
+            <a href="https://www.instagram.com/generic.w"><li onmouseover="mouseOverImage2()"  onmouseout="mouseOutImage2()" ><img src="images/instagram-xxl.png" style="height:15px; width:15px" id="instagram" onmouseover="mouseOverImage2()"  onmouseout="mouseOutImage2()" ></li></a>
+            <li onmouseover="mouseOverImage4()"  onmouseout="mouseOutImage4()" ><img src="images/github.png" style="height:15px; width:15px" id="github" onmouseover="mouseOverImage4()"  onmouseout="mouseOutImage4()" ></li></a>
+            <li onmouseover="mouseOverImage1()"  onmouseout="mouseOutImage1()" ><img src="images/linkedin.png" style="height:15px; width:15px" id="linkedin" onmouseover="mouseOverImage1()"  onmouseout="mouseOutImage1()" ></li></a>
+            <li onmouseover="mouseOverImage3()"  onmouseout="mouseOutImage3()" ><img src="images/screenshot-xxl.png" style="height:15px; width:15px" id="photo" onmouseover="mouseOverImage3()"  onmouseout="mouseOutImage3()" ></li></a>
+         </ul>
+     </div>
+  <p style="text-align:center; margin:0px"><img src="/images/circle-cropped.png" width="500px" style="margin:0px"></>
+     
+     
+</div>
+</div>
+=======
     <script src="script.js"></script>
   </head>
   <body>
@@ -15,5 +56,83 @@
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
     </div>
+>>>>>>> d16c473cb1b6bc054e0f203b596bb21dfaf2613e
   </body>
+  
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["I'm a software engineering and business student at Western University", "Outside of school I love photography, winter sports, and EDM"];
+const typingDelay = 100;
+const erasingDelay = 50;
+const newTextDelay = 1000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+window.addEventListener("load", function() {
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+</script>
+<script language="javascript" type="text/javascript">
+       function mouseOverImage1() {
+           document.getElementById("linkedin").src = "images/linkedin-3-xxl.png";
+       }
+
+       function mouseOutImage1() {
+           document.getElementById("linkedin").src = "images/linkedin.png";
+       }
+        function mouseOverImage2() {
+           document.getElementById("instagram").src = "images/instagram-xxl (1).png";
+       }
+
+       function mouseOutImage2() {
+           document.getElementById("instagram").src = "images/instagram-xxl.png";
+       }
+
+       function mouseOverImage3() {
+           document.getElementById("photo").src = "images/screenshot-xxl (1).png";
+       }
+
+       function mouseOutImage3() {
+           document.getElementById("photo").src = "images/screenshot-xxl.png";
+       }
+          function mouseOverImage4() {
+           document.getElementById("github").src = "images/github-8-xxl.png";  
+       }
+
+       function mouseOutImage4() {
+           document.getElementById("github").src = "images/github.png"; 
+       }
+   </script>

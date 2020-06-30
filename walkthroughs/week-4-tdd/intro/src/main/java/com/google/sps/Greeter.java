@@ -21,7 +21,9 @@ public class Greeter {
   /**
    * Returns a greeting for the given name.
    */
+
   public String greet(String name) {
-    return "Hello " + name;
+    return "Hello " + name.trim();
   }
 }
+ 
